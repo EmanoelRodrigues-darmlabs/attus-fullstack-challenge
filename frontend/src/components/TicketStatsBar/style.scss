@@ -1,0 +1,92 @@
+.ticketStatsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.ticketStatCard {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border: 1px solid var(--app-divider);
+  border-radius: 0.5rem;
+  background: var(--app-bg-paper);
+}
+
+.ticketStatCardPrimary {
+  border-left: 4px solid var(--app-primary);
+}
+
+.ticketStatCardWarning {
+  border-left: 4px solid var(--app-warning);
+}
+
+.ticketStatCardSuccess {
+  border-left: 4px solid var(--app-success);
+}
+
+.ticketStatCardError {
+  border-left: 4px solid var(--app-error);
+}
+
+.ticketStatCardContent {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ticketStatIcon {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border-radius: 0.5rem;
+}
+
+.ticketStatIconPrimary {
+  color: var(--app-primary);
+  background: color-mix(in srgb, var(--app-primary) 14%, transparent);
+}
+
+.ticketStatIconWarning {
+  color: var(--app-warning);
+  background: color-mix(in srgb, var(--app-warning) 14%, transparent);
+}
+
+.ticketStatIconSuccess {
+  color: var(--app-success);
+  background: color-mix(in srgb, var(--app-success) 14%, transparent);
+}
+
+.ticketStatIconError {
+  color: var(--app-error);
+  background: color-mix(in srgb, var(--app-error) 14%, transparent);
+}
+
+.ticketStatValue {
+  display: block;
+  color: var(--app-text-primary);
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.ticketStatLabel {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--app-text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .ticketStatsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .ticketStatsGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,49 @@
+.confirmationHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.5rem 1.5rem 0.75rem;
+}
+
+.confirmationIcon {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--app-error);
+}
+
+.confirmationTitle {
+  margin: 0;
+  color: var(--app-text-primary);
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.confirmationContent {
+  padding: 0 1.5rem 1rem;
+}
+
+.confirmationText {
+  margin: 0 0 0.5rem;
+  color: var(--app-text-secondary);
+  line-height: 1.45;
+}
+
+.confirmationActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem 1.25rem;
+}
+
+@media (max-width: 599px) {
+  .confirmationActions > .MuiButton-root {
+    width: 100%;
+  }
+}

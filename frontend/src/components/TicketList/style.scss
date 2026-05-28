@@ -1,0 +1,108 @@
+.ticketList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.ticketListLoadingState,
+.ticketListEmptyState {
+  display: flex;
+  min-height: 11.25rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.ticketListEmptyTitle {
+  margin: 0;
+  color: var(--app-text-primary);
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.ticketListEmptyText {
+  margin: 0;
+  color: var(--app-text-secondary);
+  line-height: 1.45;
+}
+
+.ticketCard {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--app-divider);
+  border-radius: 0.5rem;
+  background: var(--app-bg-paper);
+}
+
+.ticketCardInner {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.ticketContent,
+.ticketHeading {
+  min-width: 0;
+}
+
+.ticketContent {
+  flex: 1;
+}
+
+.ticketHeadingRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.ticketCode {
+  display: block;
+  color: var(--app-primary);
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.ticketTitle {
+  margin: 0;
+  color: var(--app-text-primary);
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.ticketDescription {
+  margin: 0.75rem 0 0;
+  color: var(--app-text-secondary);
+  line-height: 1.45;
+}
+
+.ticketTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-top: 0.75rem;
+}
+
+.ticketActions {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 900px) {
+  .ticketCardInner {
+    flex-direction: row;
+  }
+
+  .ticketActions {
+    width: 17.5rem;
+  }
+}

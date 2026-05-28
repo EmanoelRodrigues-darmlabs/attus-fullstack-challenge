@@ -1,0 +1,14 @@
+.idea/
+.vscode/
+.DS_Store
+
+backend/target/
+out/
+frontend/node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+frontend/.playwright-cli/
+
+.env
+.env.local
+*.log

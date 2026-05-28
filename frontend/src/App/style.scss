@@ -1,0 +1,101 @@
+.appShell {
+  min-height: 100vh;
+  padding: 1.5rem 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--app-primary) 12%, transparent), transparent 32rem),
+    linear-gradient(180deg, var(--app-bg-default) 0%, var(--app-bg-end) 100%);
+}
+
+.appContainer {
+  width: calc(100% - 2rem);
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+.pageStack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.formScreen {
+  display: flex;
+  width: 100%;
+  max-width: 56.25rem;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.backButton {
+  align-self: stretch;
+}
+
+.panelHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--app-divider);
+}
+
+.pageTitle {
+  margin: 0;
+  color: var(--app-text-primary);
+  font-size: 1.875rem;
+  font-weight: 900;
+  line-height: 1.15;
+  overflow-wrap: break-word;
+}
+
+.pageDescription {
+  max-width: 48.75rem;
+  margin: 0.5rem 0 0;
+  color: var(--app-text-secondary);
+  font-size: 1.0625rem;
+  line-height: 1.45;
+}
+
+@media (min-width: 900px) {
+  .appShell {
+    padding: 2rem 0;
+  }
+
+  .pageHeader {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .headerActions {
+    justify-content: flex-end;
+  }
+
+  .backButton {
+    align-self: flex-start;
+  }
+
+  .panelHeader {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .pageTitle {
+    font-size: 2.625rem;
+  }
+}

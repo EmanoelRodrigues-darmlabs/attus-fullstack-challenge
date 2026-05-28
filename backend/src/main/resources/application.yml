@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: attus-fullstack-challenge
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mariadb://localhost:3307/attus_challenge}
+    username: ${SPRING_DATASOURCE_USERNAME:attus}
+    password: ${SPRING_DATASOURCE_PASSWORD:attus}
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+
+server:
+  port: 8080
+
+app:
+  cors:
+    allowed-origins: ${APP_CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000}
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%X{requestId:-no-request}] %logger{36} - %msg%n"
+  level:
+    com.emanoel.attus.challenge: INFO
